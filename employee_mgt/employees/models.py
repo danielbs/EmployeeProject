@@ -25,6 +25,7 @@ class Employee(models.Model):
     emp_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length = 100)
     last_name = models.CharField(max_length = 100)
+    photo = models.ImageField(default = 'person1.jpg')
     email = models.EmailField(max_length=70)
     phone_nr = models.CharField(max_length = 25)
     hire_date = models.DateField()
