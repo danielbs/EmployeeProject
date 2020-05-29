@@ -1,0 +1,55 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+    <div class="row">
+        <div class="employee-detail">
+            <table>
+                <div class="col cell">
+                    <tr>
+                        <th>Employee Photo:</th>
+                        <td> <img src="{{ employee.photo.url }}"></td>
+                    </tr>
+                    <tr>
+                        <th>Employee Number:</th>
+                        <td>{{ employee.emp_id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Name:</th>
+                        <td>{{ employee.first_name }} {{ employee.last_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Email:</th>
+                        <td>{{ employee.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Phone Number:</th>
+                        <td>{{ employee.phone_nr }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Hire Date:</th>
+                        <td>{{ employee.hire_date }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Job ID:</th>
+                        <td>{{ employee.job_id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Salary:</th>
+                        <td>{{ employee.salary }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Commission Pct:</th>
+                        <td>{{ employee.commission_pct }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Manager:</th>
+                        <td>{{ employee.manager_id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Department:</th>
+                        <td>{{ employee.department_id }}</td>
+                    </tr>
+                </div>
+            </table>
+        </div>
+    </div>
+{% endblock %}

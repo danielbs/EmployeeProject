@@ -1,0 +1,10 @@
+.content-title h2{
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.employee-table{
+    text-align: left;
+}

@@ -1,0 +1,37 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+    <div class="row">
+        <div class="content-title">
+            <h2>Employee list</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="employee-table">
+            <table>
+                {% for employee in employees %}
+                <div class="col cell">
+                    <tr>
+                        <th>Employee Photo:</th>
+                        <td> <img src="{{ employee.photo.url }}"></td>
+                    </tr>
+                    <tr>
+                        <th>Employee Number:</th>
+                        <td>{{ employee.emp_id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Employee Name:</th>
+                        <td>{{ employee.first_name }} {{ employee.last_name }}</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <a href="{% url 'employee_detail' emp_id=employee.emp_id %}" >
+                            Click here for details </a>
+                        </td>
+                    </tr>
+                </div>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
